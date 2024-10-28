@@ -1,0 +1,117 @@
+Converting to rootuser:
+=======================
+sudo -i
+sudo su -
+sudo su
+
+===========================================================================================================
+
+whoami
+
+	- Just provides the username
+
+who am i
+
+	- gives username, terminal name, login time, and originating IP address or hostname.
+
+clear
+pwd
+ls
+mkdir <foldername_1 foldername_2 ..>
+cd --> change directory
+cd../.. --> two step backwards
+touch <filename_1 filename_2 ..>
+cp source_1 source_2 ..  destination
+mv
+rm <file_1 file_2 ..>
+rm -f
+rm -r <foldername>
+rm -rf <foldername>
+ls -l
+ls -a
+
+===========================================================================================================
+
+Edit file:
+==========
+
+vi <filename>
+
+i ==> insert mode
+Esc ==> Escape mode
+:wq ==> save and quit
+
+yy ==> copy entire line
+p ==> paste
+
+<n>yy ==>  copy nlines
+
+dd ==>  delete one line
+<n>dd ==>  delete nline
+
+gg ==> first line
+Shift +g ==> last line
+
+:set nu
+:set nonu
+
+:<number> ==> to reach particular line
+
+===========================================================================================================
+
+Linux file system:
+==================
+
+Types of files:
+
+	1. Directories
+	2. Special files - /Dev
+	3. Links - Hardlink (File itself gets copied) and softlink (Shortcut of the file)
+
+		Softlink => ln -s <filename> <dir path>	
+
+			- Shortlink starts with l while long listing
+		
+		Hardlink => ln <filename> <dir path>
+
+	4. Sockets
+	5. Pipes
+
+/ ==> mount point
+	
+	- Entire OS lies within mount point
+
+* Special files starts with c while long listing
+
+ls -lt
+ls -ltr
+ls -ltrh
+
+===========================================================================================================
+
+Files inside /
+==============
+
+bin (binary) ==>  Contains executable files and commands
+boot ==> contains files that needed for booting
+dev ==> Contains device driver files
+etc (edit to configure) ==> Contains system configuration files
+home ==> Contains user files
+media and mnt (Standard mount point) ==> if we insert a device (ex: pendrive) then it is called mounting and this happens in mnt folder
+
+		if automatic mount is enabled then the device will be in media folder
+		if automatic mount is disabled then the device will be in mnt folder when we mount manually the device gets moved to media folder 
+
+opt ==> contains 3rd party software
+proc ==> contains all process (all process are tracked here)
+root ==> root user homepage
+sbin ==> System admin and system related commands
+tmp (temporary)==> temporary files can be placed here
+var ==> Contains log files and mail queue
+lib (library) ==> Contains library apps used by linux
+run ==> contains files that are used in RAM (deleted when system is shutdown)
+	Contains files that are needed for running the application in runtime
+srv ==> contains server datas (datas used by shared servers)
+sys ==> contains files that interact with kernel (deleted when system is shutdown)
+
+===========================================================================================================
